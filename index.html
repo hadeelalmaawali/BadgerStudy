@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<script>try{var bsTheme=localStorage.getItem("bs_theme");if(bsTheme==="light"||bsTheme==="dark")document.documentElement.dataset.theme=bsTheme}catch(e){}</script>
+<title>BadgerStudy</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAASFBMVEUCAQHu7u5hXV4kHiCem5upV2BdJCoVGBkfHR7FaXPTk5qXIS7LeoNjZGOqOUUVVVD///9qAACrfIIA//9VAFVxPUOvr69FQkTL6sU6AAAAGHRSTlMB/vzy/v79X53+/v7+Bv4XAQL/AQP/B74Im9ccAAACwElEQVR42o1W25YiMQhMIJBrp3Wu//+nWyTt7KjRkQf1eKoaKCqknbuPGFNKMdrPRETRfbhVAGWY+E1hBrCED8/ufYk/QPYRvPc0gjn47xV8cwkYJlK2ACMcP0JI27Ki5EcKoQG0FPMLFF5mcOTJjwg/KWZpa4ZzbJiBCKgNP5iCUSwPxUXT5CduyjPb9rM0H6K7beQrhYMAiuk5dRqE4JM7ryqaXeIbSUwCPwgzwV2cUJLjI8WAzZ6R4FHTceYIh05HS8gjaYl3p4TCTaBw6TwcKq8HN4anPyV5M4jZJMXHeKPwcFMY0wieRd3TsIexiII0ytei8Tlj36O23ETVPKTSHnVs8W4VKWuXDMqnEr678sMUkfVTpJRPVa1GylJVqa2LQvHaS8vSSxEhPULAe9RGqqUJAFKktVwkyECDnnm/s57bopbWSikgFMnWd36z0+NdL7rwXmJBQdZvk9LxWCmGtlkjJcf9ViBMyNJDSEArcvSBFu8zqoR2twppIa0iacey0Yp6ZKDB6VBL/RvfdpxLIKHDUZMwvVdzw0Sk8n6dAQ8qmOo206GsCfemmTKede3ZjRVDmkPdIbA0IxToBCnqOFZ0rSqPY2DLAe5A1SJvPnSp1Xw1d0O6IczNgnpEoWsvZHrBVFVhebM6Upx/zwEE/IlmClX4KFeD5y6aNh774/cmOMN5tq48NM3NFL6E9XXicVr5rgn8F3fG40swI6EmHNBx2I1xjf+wFHZ1OMiVezZXFZv8YTQmvncf47iP/ae9SheL/8aOD3eAicuX45C2P1ZAtBvKti80oSvlHzBj8HOb2kry7P6MOPev7Wvi9Df+uOfsKlku7PUlNNY13VjnCcF8GcbpfKWmg3DZyBRPT+Efds+Ny/qyv1/QyWyTeKJhoOi2F7T9ija38Q7B7vRK73hPsSPA9JJS1+829/EPVT4Xkd9wr3AAAAAASUVORK5CYII=">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* ===== Themes: light by default, dark when the device is dark (or the toggle says so) ===== */
+:root{--bg:#F4F5F7;--hdr:#FFFFFF;--card:#FFFFFF;--card2:#E9ECEF;--field:#FFFFFF;--ink:#1D1D1F;--head:#121212;--mut:#565C63;--line:#CDD3D9;--red:#9B0000;--rt:#9B0000;--alt:#E1E5E7;--altink:#242424;--g:#1f7a45;--y:#8a6200;--r:#9B0000;--shadow:rgba(0,0,0,.12);
+--chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23242424' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121212;--hdr:#1B1B1D;--card:#1F2023;--card2:#2B2D31;--field:#26272B;--ink:#ECEDEF;--head:#FFFFFF;--mut:#B4B8BE;--line:#3A3D42;--red:#9B0000;--rt:#FF6B6B;--alt:#2E3035;--altink:#ECEDEF;--g:#4CD384;--y:#F0C25A;--r:#FF6B6B;--shadow:rgba(0,0,0,.5);--chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23ECEDEF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121212;--hdr:#1B1B1D;--card:#1F2023;--card2:#2B2D31;--field:#26272B;--ink:#ECEDEF;--head:#FFFFFF;--mut:#B4B8BE;--line:#3A3D42;--red:#9B0000;--rt:#FF6B6B;--alt:#2E3035;--altink:#ECEDEF;--g:#4CD384;--y:#F0C25A;--r:#FF6B6B;--shadow:rgba(0,0,0,.5);--chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23ECEDEF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");color-scheme:dark}
+/* ===== Base ===== */
+*{box-sizing:border-box}html{scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:env(safe-area-inset-bottom,0px);transition:background-color .2s,color .2s}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--rt);outline-offset:2px}
+h1,h2,h3{color:var(--head)}
+.accent{color:var(--rt)}
+a{color:var(--rt);font-weight:600}
+/* ===== Header ===== */
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 5vw;padding-top:calc(14px + env(safe-area-inset-top,0px));border-bottom:1px solid var(--line);background:var(--hdr);position:sticky;top:0;z-index:5}
+.logo{font-weight:800;font-size:1.45rem;letter-spacing:-.01em;background:none;border:0;color:var(--rt);padding:8px 0;border-radius:99px}
+.logo b{color:inherit}
+nav{display:flex;gap:4px}
+nav button{background:none;border:0;padding:8px 14px;border-radius:99px;font-weight:600;color:var(--mut);white-space:nowrap}
+nav button[aria-current=page]{background:var(--red);color:#fff}
+.langbtn{font-size:.85rem;font-weight:800;letter-spacing:.02em}
+.icon-btn{background:none;border:2px solid var(--line);border-radius:12px;width:44px;height:44px;display:grid;place-items:center;font-size:1.15rem;line-height:1;padding:0}
+/* ===== Layout ===== */
+main{max-width:1100px;margin:0 auto;padding:28px 5vw 60px}
+.view{display:none}.view.on{display:block}
+h1{font-size:clamp(2.4rem,7vw,4.4rem);line-height:1;letter-spacing:-.035em;margin:0 0 12px;font-weight:800}
+h1.pg{font-size:2.4rem;margin-bottom:18px}
+h2{font-size:1.5rem;margin:0 0 12px;letter-spacing:-.02em}
+.sub{color:var(--mut);max-width:56ch;margin:0 0 22px}
+.hero{padding:18px 0 8px}
+.search{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}
+.search input{flex:1 1 240px;padding:13px 16px;border-radius:12px;border:2px solid var(--line);background:var(--field)}
+.btn{background:var(--red);color:#fff;border:0;border-radius:12px;padding:12px 20px;font-weight:700}
+.btn.alt{background:var(--alt);color:var(--altink)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.sos-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.sos{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin:12px 0 22px}
+.sos button{display:flex;gap:10px;align-items:center;text-align:left;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px;font-weight:600}
+.sos button span{font-size:1.6rem}
+.sos button:hover,.sos button[aria-pressed=true]{border-color:var(--red);background:color-mix(in srgb,var(--red) 10%,var(--card))}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:0 0 18px}
+.res{display:grid;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:6px}
+.card h3{margin:0;font-size:1.15rem}
+.meta{color:var(--mut);font-size:.92rem}
+.why{margin:4px 0;padding-left:18px;font-size:.95rem}
+.why li::marker{color:var(--rt)}
+.tag{display:inline-block;background:var(--card2);border-radius:99px;padding:2px 10px;font-size:.82rem;margin:2px 4px 2px 0}
+.crowd{font-weight:600;font-size:.9rem}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.note{font-size:.85rem;color:var(--mut)}
+details.hrs{border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--card2)}
+details.hrs summary{list-style:none;cursor:pointer;font-weight:600;display:flex;justify-content:space-between}
+details.hrs summary::-webkit-details-marker{display:none}
+details.hrs summary::after{content:"›";transition:transform .2s;font-size:1.3rem;line-height:1}
+details.hrs[open] summary::after{transform:rotate(90deg)}
+/* ===== Dropdowns: custom arrow with room from the edge ===== */
+select{-webkit-appearance:none;appearance:none;background-image:var(--chev);background-repeat:no-repeat;background-position:right 14px center;background-size:12px 8px;padding-right:40px!important}
+/* ===== Explore ===== */
+.explore{display:grid;grid-template-columns:290px 1fr;gap:26px;align-items:start}
+.ftoggle{display:none}
+.filters{display:grid;gap:12px;align-content:start;position:sticky;top:96px;max-height:calc(100vh - 116px);overflow:auto;padding-right:4px}
+.filters fieldset{border:0;border-radius:16px;padding:14px 16px 12px;margin:0;background:var(--card);box-shadow:0 1px 2px var(--shadow)}
+.filters legend{float:left;width:100%;padding:0;margin-bottom:6px;font-weight:700;color:var(--rt);font-size:1rem}
+.filters legend+*{clear:both}
+.filters label{display:flex;gap:8px;align-items:center;padding:5px 0;font-size:.95rem}
+.filters label:has(select){display:grid;gap:5px;font-size:.88rem;font-weight:600;color:var(--mut)}
+.filters label:has(select) select{font-size:.95rem;font-weight:400;color:var(--ink)}
+.filters select,.filters input[type=search]{width:100%;background-color:var(--field);border:1px solid var(--line);border-radius:10px;padding:9px 10px}
+.filters input[type=checkbox]{accent-color:var(--red);width:16px;height:16px}
+.filters input[type=range]{width:100%;accent-color:var(--red)}
+#count{color:var(--mut);font-weight:600;margin:0 0 12px}
+.list{display:grid;gap:16px;align-content:start}
+#explore .card{border:0;border-left:6px solid var(--red);padding:18px 20px;gap:8px;box-shadow:0 1px 2px var(--shadow);transition:transform .15s,box-shadow .15s}
+#explore .card h3{font-size:1.25rem}
+#explore .tag{border:1px solid var(--line)}
+.card .btn.ghost{border-color:var(--rt);color:var(--rt);font-weight:700}
+.card .btn.ghost:hover{background:var(--red);border-color:var(--red);color:#fff}
+@media(hover:hover){#explore .card:hover{transform:translateY(-2px);box-shadow:0 8px 22px var(--shadow)}}
+/* ===== Study Buddy form ===== */
+.form{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:16px}
+.form label{display:grid;gap:4px;font-weight:600;font-size:.92rem;color:var(--head);min-width:0}
+.form input,.form select{width:100%;min-width:0;padding:10px;color:var(--ink);border-radius:10px;border:2px solid var(--line);background-color:var(--field)}
+/* ===== Toast, sign-in ===== */
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);max-width:calc(100% - 32px);text-align:center;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;display:none;z-index:9;box-shadow:0 6px 18px var(--shadow)}
+.locked header,.locked main,.locked footer{display:none}
+#gate{display:none;min-height:100vh;min-height:100dvh;place-items:center;padding:20px}.locked #gate{display:grid}
+#gf{max-width:560px;width:100%;display:grid;gap:12px}#gf label{display:grid;gap:4px;font-weight:600}
+#gf input{padding:12px;border-radius:10px;border:2px solid var(--line);background:var(--field)}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding:20px}
+/* ===== Tablets ===== */
+@media(max-width:800px){
+.explore{grid-template-columns:1fr;gap:14px}
+.ftoggle{display:block;width:100%}
+.filters{position:static;max-height:none;overflow:visible;padding-right:0}
+.filters:not(.open){display:none}
+}
+/* ===== Phones ===== */
+@media(max-width:640px){
+header{gap:8px 10px;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+.logo{font-size:1.2rem}
+header{flex-wrap:wrap}
+header .row{flex-wrap:nowrap}
+header .icon-btn{width:38px;height:38px}
+#who{display:none}
+header .row{gap:6px}
+header .btn.ghost{padding:7px 12px}
+nav{order:3;width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+nav button{padding:9px 2px;font-size:.88rem;text-align:center}
+main{padding:18px 16px 48px}
+h1{font-size:2.5rem}
+h1.pg{font-size:1.9rem;margin-bottom:14px}
+h2{font-size:1.3rem}
+.search input{flex-basis:100%}
+.search .btn{flex:1 1 0}
+.panel{padding:14px}
+.card,#explore .card{padding:14px 16px}
+.sos{grid-template-columns:1fr 1fr;gap:8px}
+.sos button{padding:12px;font-size:.92rem;flex-direction:column;align-items:flex-start;gap:4px}
+.row .btn{flex:1 1 auto}
+input,select{font-size:16px!important}
+.toast{border-radius:14px}
+}
+@media(max-width:380px){header{gap:8px 6px;padding-left:12px;padding-right:12px}.logo{font-size:1.1rem}header .row{gap:4px}header .btn.ghost{padding:7px 10px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}#explore .card:hover{transform:none}}
+</style></head><body class="locked">
+
+<div id="gate"><form id="gf" class="panel" novalidate><div class="row" style="justify-content:space-between;flex-wrap:nowrap"><div class="logo" style="font-size:clamp(1.5rem,7vw,2rem);white-space:nowrap"><b>BadgerStudy</b> 🦡</div><button type="button" class="icon-btn langbtn" data-lang-toggle>ES</button></div><p class="sub" style="margin:0" data-i18n="gateSub"></p><label><span data-i18n="gateEmail"></span><input id="ge" type="email" placeholder="netid@wisc.edu" autocomplete="username" required></label><button class="btn" data-i18n="signIn"></button><p id="gerr" role="alert" class="note" style="color:var(--rt);margin:0"></p></form></div>
+<header>
+<button class="logo" data-go="home" data-i18n-al="homeAria">BadgerStudy 🦡</button>
+<nav data-i18n-al="navAria"><button data-go="home" data-i18n="navHome"></button><button data-go="explore" data-i18n="navExplore"></button><button data-go="buddy" data-i18n="navBuddy"></button><button data-go="favs" data-i18n="navFavs"></button></nav>
+<div class="row"><span class="meta" id="who"></span><button class="icon-btn langbtn" type="button" data-lang-toggle>ES</button><button class="icon-btn" id="theme" type="button" aria-label="Theme">🌓</button><button class="btn ghost" id="so" type="button" data-i18n="signOut"></button></div>
+</header>
+<main>
+<section id="favs" class="view">
+<h1 class="pg" data-i18n="favsTitle"></h1>
+<div class="res" id="favList"></div>
+</section>
+<section id="home" class="view on">
+<div class="hero"><h1><span class="accent" data-i18n="hero1"></span><br><span data-i18n="hero2"></span></h1>
+
+<form class="search" id="homeSearch"><input id="q0" type="search" data-i18n-ph="homePh" data-i18n-al="homeSearchAria"><button class="btn" data-i18n="searchBtn"></button><button type="button" class="btn alt" id="sosBtn" aria-expanded="false" aria-controls="sosWrap" data-i18n="sos"></button></form>
+<div id="sosWrap" hidden>
+<div class="sos-h"><h2 data-i18n="sos"></h2></div>
+<div class="sos" id="sos"></div>
+<div id="sosOut" aria-live="polite"></div>
+</div>
+<div id="featWrap"><h2 data-i18n="featured"></h2><div class="res" id="featured"></div></div>
+</section>
+
+
+<section id="explore" class="view">
+<h1 class="pg" data-i18n="exploreTitle"></h1>
+<div class="explore">
+<button type="button" class="btn ghost ftoggle" id="ft" aria-expanded="false" aria-controls="filters"></button>
+<aside class="filters" id="filters" data-i18n-al="filtersAria">
+<fieldset><legend data-i18n="lgSearch"></legend><input type="search" id="q" data-i18n-ph="qPh"></fieldset>
+<fieldset><legend data-i18n="lgEnv"></legend>
+<label><span data-i18n="noise"></span><select id="fz"><option value="0" data-i18n="nzAny"></option><option value="1" data-i18n="nz1"></option><option value="2" data-i18n="nz2"></option><option value="3" data-i18n="nz3"></option><option value="4" data-i18n="nz4"></option></select></label>
+<label><span data-i18n="style"></span><select id="fg"><option value="" data-i18n="stAny"></option><option value="ind" data-i18n="stInd"></option><option value="grp" data-i18n="stGrp"></option></select></label>
+<label><input type="checkbox" id="fl"> <span data-i18n="natLight"></span></label></fieldset>
+<fieldset><legend data-i18n="lgLoc"></legend>
+<label><span data-i18n="maxWalk"></span> <b id="wv">35</b> min</label><input type="range" id="fw" min="3" max="35" value="35" data-i18n-al="walkAria">
+<label><span data-i18n="from"></span><select id="from"><option value="0">Bascom Hall</option><option value="1" data-i18n="from1"></option><option value="2" data-i18n="from2"></option></select></label>
+<label><input type="checkbox" data-n="bus"> <span data-i18n="nearBus"></span></label><label><input type="checkbox" data-n="coffee"> <span data-i18n="nearCoffee"></span></label><label><input type="checkbox" data-n="dining"> <span data-i18n="nearDining"></span></label></fieldset>
+<fieldset id="fam"><legend data-i18n="lgAm"></legend></fieldset>
+<fieldset><legend data-i18n="lgSort"></legend><select id="sort"><option value="match" data-i18n="sortMatch"></option><option value="dist" data-i18n="sortDist"></option><option value="crowd" data-i18n="sortCrowd"></option></select></fieldset>
+</aside>
+<div><p class="note" id="count"></p><div class="list" id="list"></div></div>
+</div>
+</section>
+
+<section id="detail" class="view"></section>
+
+<section id="buddy" class="view">
+<h1 class="pg" data-i18n="buddyTitle"></h1>
+<p class="sub" data-i18n="buddySub"></p>
+<form class="form" id="bf">
+<label><span data-i18n="bClass"></span><input id="bc" list="bcList" data-i18n-ph="bClassPh" autocomplete="off" required><datalist id="bcList"></datalist></label>
+<label><span data-i18n="bEnv"></span><select id="be"><option value="2" data-i18n="z2"></option><option value="1" data-i18n="z1"></option><option value="3" data-i18n="z3"></option><option value="4" data-i18n="z4"></option></select></label>
+<label><span data-i18n="bAvail"></span><select id="bt"><option value="morn" data-i18n="tmorn"></option><option value="eve" data-i18n="teve"></option><option value="wknd" data-i18n="twknd"></option></select></label>
+<label><span data-i18n="bStyle"></span><select id="bs"><option value="ind" data-i18n="bsInd"></option><option value="grp" data-i18n="bsGrp"></option></select></label>
+<div style="align-self:end"><button class="btn" data-i18n="findBtn"></button></div></form>
+<div class="res" id="bres"></div>
+
+</section>
+</main>
+
+<div class="toast" id="toast" role="status"></div>
+<script>
+// ===== Words in English and Spanish =====
+const T={
+en:{gateSub:"Sign in with your UW–Madison account.",gateEmail:"UW email",signIn:"Sign in",gateErr:"Use your UW–Madison email ending in @wisc.edu.",
+homeAria:"BadgerStudy home",navAria:"Main",navHome:"Home",navExplore:"Explore",navBuddy:"Study Buddy",navFavs:"Favorites",signOut:"Sign out",
+favsTitle:"My favorites",hero1:"Study Smarter",hero2:"With Bucky Badger.",homePh:"Search a building or library, like Memorial or Wendt",homeSearchAria:"Search study spots",searchBtn:"Search spots",sos:"Study SOS 🚨",featured:"Featured spots",
+exploreTitle:"Explore study spots",showF:"Show filters",hideF:"Hide filters",filtersAria:"Filters",lgSearch:"Search",qPh:"Building or keyword",lgEnv:"Environment",noise:"Noise",nzAny:"Any",nz1:"Silent only",nz2:"Quiet or quieter",nz3:"Moderate or quieter",nz4:"Social is fine",
+style:"Study style",stAny:"Individual or group",stInd:"Individual",stGrp:"Group",natLight:"Natural lighting",lgLoc:"Location",maxWalk:"Max walk:",walkAria:"Maximum walking minutes",from:"From",from1:"Dorms (Lakeshore)",from2:"Dorms (Southeast)",
+nearBus:"Near bus stop",nearCoffee:"Near coffee",nearDining:"Near dining hall",lgAm:"Amenities",lgSort:"Sort by",sortMatch:"Best match",sortDist:"Distance",sortCrowd:"Crowd reports",
+count:n=>n+" spot"+(n===1?"":"s")+" found",noSpots:"No spots match these filters. Loosen the walking distance or remove an amenity.",
+z1:"Silent",z2:"Quiet",z3:"Moderate",z4:"Social",walk:m=>m+" min walk",groups:"Good for groups",solo:"Best solo",details:"View details",
+noRep:"No recent reports",c0:"Plenty of seats",c1:"Moderately crowded",c2:"Almost full",ago:m=>m+" min ago",
+favEmpty:"No favorites yet. Open a spot and press “☆ Save to favorites”.",
+back:"‹ Back to results",walkFrom:m=>m+" min walk from your starting point",light1:"Natural light",light0:"Indoor lighting",ccNote:"Student-submitted reports, not verified live occupancy. Reports expire after 2 hours.",
+hereQ:"Are you here? Report:",r0:"🟢 Plenty of seats",r1:"🟡 Moderate",r2:"🔴 Almost full",refresh:"↻ Refresh",amen:"Amenities",noneListed:"None listed",nearby:"Nearby:",nothing:"nothing listed",
+nbbus:"bus stop",nbcoffee:"coffee shop",nbdining:"dining hall",hours:"Opening hours",sampleHrs:"Sample hours. Confirm on the building website.",saved:"★ Saved",save:"☆ Save to favorites",
+looksFull:"This spot looks full.",tryAlt:"Try",thanksRep:"Thanks! Your report is live for 2 hours.",refreshed:"Crowd reports refreshed",favOn:"Saved to Favorites ★",favOff:"Removed from Favorites",
+noSOS:"No spots match right now. Try again after more students report crowd levels.",headsUp:"Heads up: reported almost full",plenty:"Reported plenty of seats",
+buddyTitle:"Study Buddy",buddySub:"Find someone studying the same thing. Contact info is shared only after both of you agree.",bClass:"UW–Madison class",bClassPh:"Type a class, like CS 400",bEnv:"Environment",bAvail:"Available",bStyle:"Style",
+tmorn:"Weekday mornings",teve:"Weekday evenings",twknd:"Weekends",bsInd:"Side by side, individual",bsGrp:"Group work",findBtn:"Find matches",
+bCount:(n,c)=>n+" students in "+c+". Best matches first.",sameT:"Same time",sameN:"Same noise level",sameS:"Same study style",grp:"Group",ind:"Individual",reqBtn:"Request to study together",reqDone:"Requested. Contact info is shared only if they accept.",bNone:"No students found for that class yet. Pick a class from the list, like CS 400.",
+thAuto:"Theme: match device",thLight:"Theme: light",thDark:"Theme: dark",tapChange:". Tap to change.",langNow:"Language: English",langBtnAria:"Cambiar a español"},
+es:{gateSub:"Inicia sesión con tu cuenta de UW–Madison.",gateEmail:"Correo de UW",signIn:"Iniciar sesión",gateErr:"Usa tu correo de UW–Madison que termina en @wisc.edu.",
+homeAria:"Inicio de BadgerStudy",navAria:"Principal",navHome:"Inicio",navExplore:"Explorar",navBuddy:"Compañeros",navFavs:"Favoritos",signOut:"Salir",
+favsTitle:"Mis favoritos",hero1:"Estudia mejor",hero2:"con Bucky Badger.",homePh:"Busca un edificio o biblioteca, como Memorial o Wendt",homeSearchAria:"Buscar lugares de estudio",searchBtn:"Buscar lugares",sos:"SOS de estudio 🚨",featured:"Lugares destacados",
+exploreTitle:"Explora lugares de estudio",showF:"Mostrar filtros",hideF:"Ocultar filtros",filtersAria:"Filtros",lgSearch:"Buscar",qPh:"Edificio o palabra clave",lgEnv:"Ambiente",noise:"Ruido",nzAny:"Cualquiera",nz1:"Solo silencioso",nz2:"Tranquilo o menos",nz3:"Moderado o menos",nz4:"Social está bien",
+style:"Estilo de estudio",stAny:"Individual o en grupo",stInd:"Individual",stGrp:"En grupo",natLight:"Luz natural",lgLoc:"Ubicación",maxWalk:"Caminata máx.:",walkAria:"Minutos máximos a pie",from:"Desde",from1:"Residencias (Lakeshore)",from2:"Residencias (Southeast)",
+nearBus:"Cerca de parada de autobús",nearCoffee:"Cerca de café",nearDining:"Cerca de comedor",lgAm:"Servicios",lgSort:"Ordenar por",sortMatch:"Mejor coincidencia",sortDist:"Distancia",sortCrowd:"Reportes de ocupación",
+count:n=>n===1?"1 lugar encontrado":n+" lugares encontrados",noSpots:"Ningún lugar coincide con estos filtros. Aumenta la distancia a pie o quita un servicio.",
+z1:"Silencioso",z2:"Tranquilo",z3:"Moderado",z4:"Social",walk:m=>m+" min a pie",groups:"Bueno para grupos",solo:"Mejor solo",details:"Ver detalles",
+noRep:"Sin reportes recientes",c0:"Muchos lugares libres",c1:"Algo lleno",c2:"Casi lleno",ago:m=>"hace "+m+" min",
+favEmpty:"Aún no tienes favoritos. Abre un lugar y toca “☆ Guardar en favoritos”.",
+back:"‹ Volver a los resultados",walkFrom:m=>m+" min a pie desde tu punto de partida",light1:"Luz natural",light0:"Luz artificial",ccNote:"Reportes enviados por estudiantes, no ocupación verificada en vivo. Los reportes vencen después de 2 horas.",
+hereQ:"¿Estás aquí? Reporta:",r0:"🟢 Muchos lugares",r1:"🟡 Moderado",r2:"🔴 Casi lleno",refresh:"↻ Actualizar",amen:"Servicios",noneListed:"Ninguno indicado",nearby:"Cerca:",nothing:"nada indicado",
+nbbus:"parada de autobús",nbcoffee:"cafetería",nbdining:"comedor",hours:"Horario",sampleHrs:"Horario de ejemplo. Confírmalo en el sitio web del edificio.",saved:"★ Guardado",save:"☆ Guardar en favoritos",
+looksFull:"Este lugar parece lleno.",tryAlt:"Prueba",thanksRep:"¡Gracias! Tu reporte estará activo por 2 horas.",refreshed:"Reportes de ocupación actualizados",favOn:"Guardado en Favoritos ★",favOff:"Eliminado de Favoritos",
+noSOS:"Ningún lugar coincide ahora. Vuelve a intentarlo cuando más estudiantes reporten la ocupación.",headsUp:"Ojo: reportado casi lleno",plenty:"Reportado con muchos lugares libres",
+buddyTitle:"Compañero de estudio",buddySub:"Encuentra a alguien que estudie lo mismo. Los datos de contacto solo se comparten cuando ambos aceptan.",bClass:"Clase de UW–Madison",bClassPh:"Escribe una clase, como CS 400",bEnv:"Ambiente",bAvail:"Disponible",bStyle:"Estilo",
+tmorn:"Mañanas entre semana",teve:"Noches entre semana",twknd:"Fines de semana",bsInd:"Lado a lado, individual",bsGrp:"Trabajo en grupo",findBtn:"Buscar compañeros",
+bCount:(n,c)=>n+" estudiantes en "+c+". Las mejores coincidencias primero.",sameT:"Mismo horario",sameN:"Mismo nivel de ruido",sameS:"Mismo estilo de estudio",grp:"En grupo",ind:"Individual",reqBtn:"Pedir estudiar juntos",reqDone:"Solicitud enviada. El contacto se comparte solo si acepta.",bNone:"Aún no hay estudiantes en esa clase. Elige una clase de la lista, como CS 400.",
+thAuto:"Tema: según el dispositivo",thLight:"Tema: claro",thDark:"Tema: oscuro",tapChange:". Toca para cambiar.",langNow:"Idioma: español",langBtnAria:"Switch to English"}};
+let LANG="en";try{const sv=localStorage.getItem("bs_lang");LANG=sv==="es"||sv==="en"?sv:((navigator.language||"").toLowerCase().startsWith("es")?"es":"en")}catch(e){}
+const t=(k,...a)=>{const v=(T[LANG][k]!==undefined?T[LANG][k]:T.en[k]);return typeof v==="function"?v(...a):v};
+const AMW={en:{outlets:"Charging outlets",wifi:"Strong Wi-Fi",print:"Printers nearby",vend:"Vending machines",white:"Whiteboards",access:"Wheelchair accessible",elev:"Elevator",micro:"Microwaves nearby"},
+es:{outlets:"Enchufes para cargar",wifi:"Buen Wi-Fi",print:"Impresoras cerca",vend:"Máquinas expendedoras",white:"Pizarras",access:"Accesible en silla de ruedas",elev:"Ascensor",micro:"Microondas cerca"}};
+const AMK=Object.keys(AMW.en),am=k=>AMW[LANG][k];
+const nz=z=>t("z"+z);
+const HRSW={en:["Mon–Thu: 8 am – midnight","Fri: 8 am – 6 pm","Sat: 10 am – 6 pm","Sun: 10 am – midnight"],es:["Lun–Jue: 8 a. m. – medianoche","Vie: 8 a. m. – 6 p. m.","Sáb: 10 a. m. – 6 p. m.","Dom: 10 a. m. – medianoche"]};
+// Real hours where we have them (Morgridge Hall, from cdis.wisc.edu)
+const REALH={10:{en:["Mon–Thu: 7 am – 9:30 pm","Fri: 7 am – 7 pm","Sat: noon – 7 pm","Sun: noon – 9:30 pm"],es:["Lun–Jue: 7 a. m. – 9:30 p. m.","Vie: 7 a. m. – 7 p. m.","Sáb: mediodía – 7 p. m.","Dom: mediodía – 9:30 p. m."]}};
+// Spanish spot descriptions (building names stay in English)
+const FES={1:"Sala de lectura del 4.º piso",2:"Mesas y salas de grupo del nivel 2",3:"Cubículos del nivel superior",4:"Planta principal",5:"Salones del nivel 2",6:"Salón principal",7:"Área de lectura",8:"Salón de la planta baja",9:"Asientos cerca del atrio",
+10:"Biblioteca CDIS y Blank Student Commons (2.º piso)",11:"Atrio de la planta principal",12:"Mesas de pasillo y salones",13:"Mesas de estudio abiertas",15:"816 State St, sala de lectura principal",17:"Sala de lectura 976 de Memorial Library",
+18:"412 Historical Society (con cita previa)",19:"211 Limnology Lab, junto al lago Mendota",27:"2200 Grainger Hall, Learning Commons",32:"Facultad de Derecho, 975 Bascom Mall"};
+const fdesc=s=>LANG==="es"&&FES[s.id]?FES[s.id]:s.f;
+// d = walk minutes from [Bascom Hall, Lakeshore dorms, Southeast dorms]
+const S=[
+{id:1,n:"Memorial Library",f:"4th floor reading room",d:[4,15,14],z:1,g:0,l:1,a:["outlets","wifi","print","elev","access"],nb:["bus","coffee"],hid:0},
+{id:2,n:"College Library (Helen C. White)",f:"Level 2 tables and group rooms",d:[7,12,12],z:2,g:1,l:1,a:["outlets","wifi","print","white","elev","access","vend"],nb:["bus","coffee"],hid:0},
+{id:3,n:"Steenbock Library",f:"Upper-level carrels",d:[11,18,14],z:1,g:0,l:0,a:["outlets","wifi","print","elev"],nb:["bus"],hid:0},
+{id:4,n:"Wendt Commons",f:"Main floor",d:[12,17,8],z:3,g:1,l:1,a:["outlets","wifi","white","vend","micro","elev","access"],nb:["coffee","bus"],hid:0},
+{id:5,n:"Union South",f:"Level 2 lounges",d:[14,19,9],z:4,g:1,l:1,a:["outlets","wifi","micro","vend","elev","access"],nb:["coffee","dining","bus"],hid:0},
+{id:6,n:"Memorial Union",f:"Main lounge",d:[8,6,13],z:4,g:1,l:1,a:["outlets","wifi","micro","elev","access"],nb:["coffee","dining","bus"],hid:0},
+{id:7,n:"Ebling Library",f:"Reading area",d:[16,20,12],z:1,g:0,l:0,a:["outlets","wifi","print","elev"],nb:["bus"],hid:1},
+{id:8,n:"Education Building lounge",f:"Ground-floor lounge",d:[5,13,13],z:3,g:1,l:1,a:["outlets","wifi","white","vend"],nb:["coffee"],hid:1},
+{id:9,n:"Mosse Humanities Building",f:"Seating near the atrium",d:[6,12,12],z:2,g:0,l:1,a:["outlets","wifi","elev","access"],nb:["bus"],hid:1},
+{id:10,n:"Morgridge Hall",f:"CDIS Library and Blank Student Commons (2nd floor)",d:[12,17,10],z:3,g:1,l:1,a:["outlets","wifi","print","white","elev","access"],nb:["bus","coffee"],hid:0},
+{id:11,n:"Discovery Building",f:"Main-floor atrium",d:[13,18,10],z:3,g:1,l:1,a:["outlets","wifi","elev","access"],nb:["bus","coffee"],hid:0},
+{id:12,n:"Computer Sciences Building",f:"Hallway tables and lounges",d:[15,20,8],z:3,g:1,l:0,a:["outlets","wifi","print","white","vend"],nb:["bus","coffee","dining"],hid:0},
+{id:13,n:"Engineering Centers Building",f:"Open study tables",d:[16,20,10],z:2,g:1,l:1,a:["outlets","wifi","white","vend","elev","access"],nb:["bus","coffee"],hid:0},
+{id:14,n:"Kohler Art Library",f:"160 Elvehjem Building (Chazen)",d:[6,12,10],z:2,g:0,l:1,a:["outlets","wifi","print","elev","access"],nb:["bus","coffee"],hid:0},
+{id:15,n:"Wisconsin Historical Society Library",f:"816 State St, main reading room",d:[5,14,15],z:1,g:0,l:1,a:["outlets","wifi","print","elev","access"],nb:["bus","coffee"],hid:0},
+{id:16,n:"Mills Music Library",f:"B162 Memorial Library",d:[4,15,14],z:2,g:0,l:0,a:["outlets","wifi","elev","access"],nb:["bus","coffee"],hid:0},
+{id:17,n:"Special Collections",f:"976 Memorial Library reading room",d:[4,15,14],z:1,g:0,l:1,a:["wifi","elev","access"],nb:["bus","coffee"],hid:0},
+{id:18,n:"Wisconsin Center for Film & Theater Research",f:"412 Historical Society (by appointment)",d:[5,14,15],z:1,g:0,l:0,a:["wifi","elev"],nb:["bus","coffee"],hid:0},
+{id:19,n:"Limnology Library",f:"211 Limnology Lab, on Lake Mendota",d:[6,11,15],z:1,g:0,l:1,a:["wifi"],nb:["bus"],hid:0},
+{id:20,n:"Wisconsin's Water Library",f:"238 Goodnight Hall",d:[15,6,22],z:2,g:0,l:1,a:["outlets","wifi","elev","access"],nb:["bus"],hid:0},
+{id:21,n:"AMP Library (Astronomy, Math & Physics)",f:"1150 Chamberlin Hall",d:[11,16,10],z:2,g:1,l:1,a:["outlets","wifi","print","white","elev","access"],nb:["bus","coffee"],hid:0},
+{id:22,n:"Chemistry Library",f:"1305D Chemistry Building",d:[10,15,9],z:2,g:0,l:0,a:["outlets","wifi","elev"],nb:["bus","coffee"],hid:0},
+{id:23,n:"Geology Library (Leith)",f:"440 Weeks Hall",d:[14,19,8],z:2,g:0,l:1,a:["outlets","wifi","elev","access"],nb:["bus"],hid:0},
+{id:24,n:"AOSS Library",f:"1225 W Dayton St",d:[14,19,8],z:2,g:0,l:1,a:["outlets","wifi","elev"],nb:["bus","dining"],hid:0},
+{id:25,n:"American Indian Studies Resource Center",f:"338 Ingraham Hall",d:[5,10,16],z:2,g:1,l:1,a:["outlets","wifi","elev"],nb:["bus"],hid:0},
+{id:26,n:"UW Archives",f:"425 Steenbock Library",d:[11,18,14],z:1,g:0,l:0,a:["wifi","elev","access"],nb:["bus"],hid:0},
+{id:27,n:"Business Library",f:"2200 Grainger Hall, Learning Commons",d:[6,13,7],z:2,g:1,l:1,a:["outlets","wifi","print","white","elev","access","vend"],nb:["bus","coffee"],hid:0},
+{id:28,n:"Cooperative Children's Book Center",f:"401 Teacher Education Building",d:[12,17,9],z:1,g:0,l:1,a:["wifi","elev","access"],nb:["bus","coffee"],hid:0},
+{id:29,n:"Data & Information Services Center",f:"3325 Social Science Building",d:[5,9,17],z:2,g:0,l:0,a:["outlets","wifi","elev"],nb:["bus"],hid:0},
+{id:30,n:"Journalism Reading Room",f:"2130 Vilas Hall",d:[7,13,8],z:2,g:0,l:1,a:["outlets","wifi","print","elev","access"],nb:["bus","coffee"],hid:0},
+{id:31,n:"Learning Support Services",f:"259 Van Hise Hall",d:[7,10,14],z:2,g:0,l:0,a:["outlets","wifi","print","elev","access"],nb:["bus"],hid:0},
+{id:32,n:"Law Library",f:"Law School, 975 Bascom Mall",d:[2,13,13],z:1,g:1,l:1,a:["outlets","wifi","print","elev","access"],nb:["bus","coffee"],hid:0},
+{id:33,n:"Robinson Map Library",f:"310 Science Hall",d:[3,12,13],z:2,g:0,l:1,a:["outlets","wifi"],nb:["bus","coffee"],hid:0},
+{id:34,n:"Max Kade Institute Library",f:"901 University Bay Dr",d:[30,18,32],z:1,g:0,l:1,a:["wifi"],nb:["bus"],hid:0},
+{id:35,n:"MERIT Library",f:"301 Teacher Education Building",d:[12,17,9],z:2,g:1,l:1,a:["outlets","wifi","print","white","elev","access"],nb:["bus","coffee"],hid:0},
+{id:36,n:"Social Work Library (Franks)",f:"236 School of Social Work Building",d:[13,17,9],z:2,g:0,l:1,a:["outlets","wifi","elev","access"],nb:["bus"],hid:0}
+];
+const now=()=>Date.now(),M=60000,TTL=120*M;
+const R={1:[{l:2,t:now()-12*M}],2:[{l:1,t:now()-25*M}],3:[{l:0,t:now()-40*M}],4:[{l:0,t:now()-8*M}],5:[{l:1,t:now()-50*M}],6:[{l:2,t:now()-70*M}],7:[{l:0,t:now()-30*M}],8:[{l:0,t:now()-15*M}]};
+const favs=new Set();let from=0,cur=null;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function latest(id){const r=(R[id]||[]).filter(x=>now()-x.t<TTL).sort((a,b)=>b.t-a.t);return r[0]||null}
+function crowd(id){const r=latest(id);if(!r)return `<span class="crowd meta">⚪ ${t("noRep")}</span>`;
+const m=Math.max(1,Math.round((now()-r.t)/M)),L=[["🟢","c0","--g"],["🟡","c1","--y"],["🔴","c2","--r"]][r.l];
+return `<span class="crowd" style="color:var(${L[2]})">${L[0]} ${t(L[1])} · ${t("ago",m)}</span>`}
+function toast(x){const e=$("#toast");e.textContent=x;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display="none",2600)}
+function go(v){$$(".view").forEach(x=>x.classList.toggle("on",x.id===v));$$("nav button").forEach(b=>b.removeAttribute("aria-current"));
+$$("nav button").forEach(b=>{if(b.dataset.go===v)b.setAttribute("aria-current","page")});if(v==="favs")renderFavs();window.scrollTo(0,0)}
+function tags(s){return s.a.map(a=>`<span class="tag">${am(a)}</span>`).join("")}
+function spotCard(s,why,rank){return `<article class="card"><h3>${rank?rank+". ":""}${esc(s.n)}</h3>
+<div class="meta">${esc(fdesc(s))} · ${t("walk",s.d[from])} · ${nz(s.z)} · ${s.g?t("groups"):t("solo")}</div>
+${why?`<ul class="why">${why.map(w=>`<li>${esc(w)}</li>`).join("")}</ul>`:""}
+<div>${crowd(s.id)}</div><div>${tags(s)}</div>
+<div class="row"><button class="btn ghost" data-open="${s.id}">${t("details")}</button></div></article>`}
+
+// Study SOS
+const MODES=[
+{k:"batt",e:"🔋",t:{en:"My laptop is dying!",es:"¡Mi laptop se queda sin batería!"},f:s=>s.a.includes("outlets"),sc:s=>30,
+ w:s=>LANG==="es"?["Tiene enchufes para cargar","A solo "+s.d[from]+" min, así que conectarás rápido"]:["Has charging outlets","Only "+s.d[from]+" min away, so you’ll plug in fast"]},
+{k:"exam",e:"📚",t:{en:"My exam is tomorrow!",es:"¡Mi examen es mañana!"},f:s=>s.z<=2,sc:s=>(3-s.z)*15,
+ w:s=>LANG==="es"?["Ambiente "+nz(s.z).toLowerCase()+" con pocas distracciones",s.a.includes("outlets")?"Enchufes para una sesión larga":"Espacio tranquilo y con poco movimiento"]:[nz(s.z)+" environment with few distractions",s.a.includes("outlets")?"Outlets for a long session":"Settled, low-traffic space"]},
+{k:"t30",e:"⏰",t:{en:"I only have 30 minutes!",es:"¡Solo tengo 30 minutos!"},f:s=>s.d[from]<=10,sc:s=>40-s.d[from]*3,
+ w:s=>LANG==="es"?["Solo "+s.d[from]+" min a pie","Te deja casi todos tus 30 minutos para estudiar"]:["Just "+s.d[from]+" min walk","Leaves most of your 30 minutes for studying"]},
+{k:"grp",e:"👥",t:{en:"I have a group project!",es:"¡Tengo un proyecto en grupo!"},f:s=>s.g&&s.a.includes("white"),sc:s=>20,
+ w:s=>LANG==="es"?["Espacio colaborativo con pizarras","El nivel de ruido ("+nz(s.z).toLowerCase()+") permite hablar"]:["Collaborative space with whiteboards","Noise level ("+nz(s.z).toLowerCase()+") allows talking"]},
+{k:"cold",e:"❄️",t:{en:"It’s freezing outside!",es:"¡Afuera hace mucho frío!"},f:s=>true,sc:s=>40-s.d[from]*3+(s.nb.includes("bus")?12:0),
+ w:s=>LANG==="es"?["Caminata corta al aire libre: "+s.d[from]+" min",s.nb.includes("bus")?"Parada de autobús cerca para el viaje":"Vestíbulo cerrado para calentarte"]:["Short outdoor walk: "+s.d[from]+" min",s.nb.includes("bus")?"Bus stop nearby for the ride":"Enclosed lobby to warm up in"]},
+{k:"full",e:"😵",t:{en:"Everywhere is full!",es:"¡Todo está lleno!"},f:s=>{const r=latest(s.id);return r&&r.l<2},sc:s=>0,
+ w:s=>[LANG==="es"?"Un reporte reciente dice que hay lugares disponibles":"Recent report says seats are available"]}
+];
+function rank(mode){return S.filter(s=>mode.f(s)).map(s=>{let sc=100-s.d[from]*2+mode.sc(s);const r=latest(s.id);if(r){if(r.l==2)sc-=80;if(r.l==0)sc+=12}
+const w=mode.w(s).slice();if(r&&r.l==2)w.push(t("headsUp"));if(r&&r.l==0)w.push(t("plenty"));return{s,sc,w}}).sort((a,b)=>b.sc-a.sc)}
+let activeMode=null;
+function runSOS(k){activeMode=MODES.find(m=>m.k===k);$$("#sos button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));
+const rs=rank(activeMode).slice(0,3);
+$("#sosOut").innerHTML=`<div class="panel"><h2>${activeMode.e} ${esc(activeMode.t[LANG])}</h2>
+<div class="res">${rs.length?rs.map((r,i)=>spotCard(r.s,r.w,i+1)).join(""):`<p>${t("noSOS")}</p>`}</div></div>`}
+function renderSOSButtons(){$("#sos").innerHTML=MODES.map(m=>`<button data-k="${m.k}" aria-pressed="${activeMode&&activeMode.k===m.k}"><span>${m.e}</span>${esc(m.t[LANG])}</button>`).join("")}
+$("#sos").onclick=e=>{const b=e.target.closest("button");if(b)runSOS(b.dataset.k)};
+
+// Featured + Explore
+function renderFeatured(){$("#featured").innerHTML=[1,4,6].map(i=>spotCard(S.find(s=>s.id===i))).join("")}
+$("#fam").insertAdjacentHTML("beforeend",AMK.map(k=>`<label><input type="checkbox" data-a="${k}"> <span data-am="${k}"></span></label>`).join(""));
+function score(s){return 100-s.d[from]*2+(latest(s.id)?[10,0,-30][latest(s.id).l]:0)}
+function renderList(){from=+$("#from").value;$("#wv").textContent=$("#fw").value;
+const q=$("#q").value.toLowerCase(),fz=+$("#fz").value,fg=$("#fg").value,fl=$("#fl").checked,fw=+$("#fw").value;
+const nb=$$("[data-n]:checked").map(x=>x.dataset.n),amSel=$$("[data-a]:checked").map(x=>x.dataset.a);
+let r=S.filter(s=>(!q||(s.n+" "+s.f+" "+(FES[s.id]||"")).toLowerCase().includes(q))&&(!fz||s.z<=fz)&&(fg!=="grp"||s.g)&&(fg!=="ind"||s.z<=3)&&(!fl||s.l)&&s.d[from]<=fw&&nb.every(x=>s.nb.includes(x))&&amSel.every(x=>s.a.includes(x)));
+const so=$("#sort").value;r.sort((a,b)=>so==="dist"?a.d[from]-b.d[from]:so==="crowd"?(latest(a.id)?latest(a.id).l:1)-(latest(b.id)?latest(b.id).l:1):score(b)-score(a));
+$("#count").textContent=t("count",r.length);
+$("#list").innerHTML=r.length?r.map(s=>spotCard(s)).join(""):`<div class="panel">${t("noSpots")}</div>`}
+$$(".filters input,.filters select").forEach(e=>e.addEventListener("input",renderList));
+$("#homeSearch").onsubmit=e=>{e.preventDefault();$("#q").value=$("#q0").value;renderList();go("explore")};
+function renderFavs(){const f=S.filter(s=>favs.has(s.id));$("#favList").innerHTML=f.length?f.map(s=>spotCard(s)).join(""):`<div class="panel">${t("favEmpty")}</div>`}
+
+// Detail
+function renderDetail(){const s=cur,real=REALH[s.id];
+$("#detail").innerHTML=`<button class="btn ghost" data-go="explore">${t("back")}</button>
+<h1 class="pg" style="margin-top:16px">${esc(s.n)}</h1>
+<p class="sub">${esc(fdesc(s))} · ${t("walkFrom",s.d[from])} · ${nz(s.z)} · ${s.l?t("light1"):t("light0")}</p>
+<div class="panel"><h2>CrowdCheck</h2><div id="cc">${crowd(s.id)}</div>
+<p class="note">${t("ccNote")}</p>
+<div class="row"><b>${t("hereQ")}</b><button class="btn ghost" data-rep="0">${t("r0")}</button><button class="btn ghost" data-rep="1">${t("r1")}</button><button class="btn ghost" data-rep="2">${t("r2")}</button><button class="btn ghost" id="rf">${t("refresh")}</button></div><div id="alt"></div></div>
+<div class="panel"><h2>${t("amen")}</h2>${tags(s)||t("noneListed")}<p class="meta">${t("nearby")} ${s.nb.map(x=>t("nb"+x)).join(", ")||t("nothing")}</p></div>
+<details class="hrs"><summary>${t("hours")}</summary><p style="margin:8px 0 0">${(real?real[LANG]:HRSW[LANG]).join("<br>")}</p>${real?"":`<p class="note">${t("sampleHrs")}</p>`}</details>
+<div class="row" style="margin-top:16px"><button class="btn" id="fav">${favs.has(s.id)?t("saved"):t("save")}</button></div>`;showAlt()}
+function openSpot(id){cur=S.find(s=>s.id===id);renderDetail();go("detail")}
+function showAlt(){const l=latest(cur.id);$("#alt").innerHTML="";if(l&&l.l==2){const a=S.filter(x=>x.id!==cur.id).map(x=>({x,sc:score(x)})).sort((a,b)=>b.sc-a.sc)[0].x;
+$("#alt").innerHTML=`<p><b>${t("looksFull")}</b> ${t("tryAlt")} <a href="#" data-open="${a.id}">${esc(a.n)}</a> (${t("walk",a.d[from])}).</p>`}}
+document.addEventListener("click",e=>{const x=e.target.closest("[data-go],[data-open],[data-rep],#rf,#fav,[data-lang-toggle]");if(!x)return;
+if(x.hasAttribute("data-lang-toggle")){setLang(LANG==="es"?"en":"es");toast(t("langNow"))}
+else if(x.dataset.go){go(x.dataset.go);if(x.dataset.go==="explore")renderList()}
+else if(x.dataset.open){e.preventDefault();openSpot(+x.dataset.open)}
+else if(x.dataset.rep!==undefined){(R[cur.id]=R[cur.id]||[]).push({l:+x.dataset.rep,t:now()});$("#cc").innerHTML=crowd(cur.id);showAlt();toast(t("thanksRep"))}
+else if(x.id==="rf"){$("#cc").innerHTML=crowd(cur.id);showAlt();toast(t("refreshed"))}
+else if(x.id==="fav"){const on=!favs.has(cur.id);on?favs.add(cur.id):favs.delete(cur.id);x.textContent=on?t("saved"):t("save");renderFavs();toast(on?t("favOn"):t("favOff"))}});
+setInterval(()=>{if($("#detail").classList.contains("on")&&cur){$("#cc").innerHTML=crowd(cur.id);showAlt()}},30000);
+
+// Study Buddy (sample profiles)
+const C=[["CS 200","Programming I","Programación I"],["CS 300","Programming II","Programación II"],["CS 354","Machine Organization and Programming","Organización de máquinas y programación"],["CS 400","Programming III","Programación III"],["CS 540","Introduction to Artificial Intelligence","Introducción a la inteligencia artificial"],
+["MATH 221","Calculus and Analytic Geometry 1","Cálculo y geometría analítica 1"],["MATH 222","Calculus and Analytic Geometry 2","Cálculo y geometría analítica 2"],["MATH 234","Calculus: Functions of Several Variables","Cálculo: funciones de varias variables"],["MATH 340","Elementary Matrix and Linear Algebra","Álgebra lineal y matrices elemental"],
+["STAT 240","Data Science Modeling I","Modelado en ciencia de datos I"],["CHEM 103","General Chemistry I","Química general I"],["CHEM 104","General Chemistry II","Química general II"],["PHYSICS 201","General Physics","Física general"],["BIOLOGY 151","Introductory Biology","Biología introductoria"],
+["ECON 101","Principles of Microeconomics","Principios de microeconomía"],["ECON 102","Principles of Macroeconomics","Principios de macroeconomía"],["PSYCH 202","Introduction to Psychology","Introducción a la psicología"]];
+function renderCourses(){$("#bcList").innerHTML=C.map(c=>`<option value="${c[0]}">${c[0]} – ${esc(LANG==="es"?c[2]:c[1])}</option>`).join("")}
+const NAMES=["Amina","Jordan","Priya","Leo","Sam","Maya","Ethan","Sofia","Noah","Aisha","Lucas","Chloe","Omar","Grace","Mateo","Hannah","Ravi","Zoe","Kai","Lily","Diego","Nora","Ben","Mei","Isaac","Ella","Tyler","Fatima","Owen","Ava"];
+const TIMES=["morn","eve","wknd"];
+// 6 sample students per class: [name, class, noise 1–4, time, style]
+const P=[];C.forEach((c,i)=>{for(let j=0;j<6;j++){const k=i*6+j;P.push([NAMES[(k*7)%NAMES.length],c[0],(i+j)%4+1,TIMES[(i+j*2)%3],(i+j)%2?"grp":"ind"])}});
+const norm=v=>v.split("–")[0].replace(/\s+/g,"").toUpperCase();
+let buddySearched=false;
+function renderBuddy(){const c=norm($("#bc").value),tm=$("#bt").value,st=$("#bs").value,en=+$("#be").value;
+const m=P.filter(p=>norm(p[1])===c).map(p=>{const why=[];if(p[3]===tm)why.push(t("sameT"));if(p[2]===en)why.push(t("sameN"));if(p[4]===st)why.push(t("sameS"));return{p,s:(p[3]===tm?3:0)+(p[2]===en?2:0)+(p[4]===st?1:0),why}}).sort((a,b)=>b.s-a.s);
+$("#bres").innerHTML=m.length?`<p class="note" style="margin:0">${t("bCount",m.length,esc(m[0].p[1]))}</p>`+m.map(x=>`<article class="card"><h3>${x.p[0]}</h3><div class="meta">${x.p[1]} · ${nz(x.p[2])} · ${t("t"+x.p[3])} · ${x.p[4]==="grp"?t("grp"):t("ind")}</div>${x.why.length?`<div>${x.why.map(w=>`<span class="tag">✓ ${w}</span>`).join("")}</div>`:""}<div class="row"><button class="btn" data-bud>${t("reqBtn")}</button></div></article>`).join(""):`<div class="panel">${t("bNone")}</div>`}
+$("#bf").onsubmit=e=>{e.preventDefault();buddySearched=true;renderBuddy()};
+$("#bres").onclick=e=>{const b=e.target.closest("[data-bud]");if(b){b.textContent=t("reqDone");b.disabled=true}};
+
+// Sign in
+const UW=/^[a-z0-9._-]+@wisc\.edu$/i;
+function signIn(id){document.body.classList.remove("locked");$("#who").textContent=id;try{sessionStorage.setItem("sd_user",id)}catch(e){}}
+function signOut(){document.body.classList.add("locked");$("#ge").value="";try{sessionStorage.removeItem("sd_user")}catch(e){}go("home")}
+$("#gf").onsubmit=e=>{e.preventDefault();const v=$("#ge").value.trim();if(!UW.test(v)){$("#gerr").textContent=t("gateErr");return}$("#gerr").textContent="";signIn(v.toLowerCase())};
+$("#so").onclick=signOut;
+try{const u=sessionStorage.getItem("sd_user");if(u&&UW.test(u))signIn(u)}catch(e){}
+$("#sosBtn").onclick=()=>{const w=$("#sosWrap"),open=w.hidden;w.hidden=!open;$("#featWrap").hidden=open;$("#sosBtn").setAttribute("aria-expanded",open)};
+
+// Theme switch: match device → light → dark
+const TH=["auto","light","dark"],TI={auto:["🌓","thAuto"],light:["☀️","thLight"],dark:["🌙","thDark"]};
+const curTheme=()=>document.documentElement.dataset.theme||"auto";
+function paintTheme(){const th=curTheme(),b=$("#theme");b.textContent=TI[th][0];b.title=t(TI[th][1]);b.setAttribute("aria-label",t(TI[th][1])+t("tapChange"));
+const m=$('meta[name="theme-color"]');if(m)m.content=getComputedStyle(document.documentElement).getPropertyValue("--hdr").trim()}
+$("#theme").onclick=()=>{const th=TH[(TH.indexOf(curTheme())+1)%3];if(th==="auto")delete document.documentElement.dataset.theme;else document.documentElement.dataset.theme=th;
+try{th==="auto"?localStorage.removeItem("bs_theme"):localStorage.setItem("bs_theme",th)}catch(e){}paintTheme();toast(t(TI[th][1]))};
+try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",paintTheme)}catch(e){}
+// Phone: show/hide filters
+const paintFT=()=>{$("#ft").textContent=$("#filters").classList.contains("open")?t("hideF"):t("showF")};
+$("#ft").onclick=()=>{const o=$("#filters").classList.toggle("open");$("#ft").setAttribute("aria-expanded",o);paintFT()};
+
+// Language: English ⇄ Español (redraws everything on screen)
+function setLang(l){LANG=l;try{localStorage.setItem("bs_lang",l)}catch(e){}applyLang()}
+function applyLang(){document.documentElement.lang=LANG;
+$$("[data-i18n]").forEach(e=>e.textContent=t(e.dataset.i18n));
+$$("[data-i18n-ph]").forEach(e=>e.placeholder=t(e.dataset.i18nPh));
+$$("[data-i18n-al]").forEach(e=>e.setAttribute("aria-label",t(e.dataset.i18nAl)));
+$$("[data-am]").forEach(e=>e.textContent=am(e.dataset.am));
+$$("[data-lang-toggle]").forEach(b=>{b.textContent=LANG==="es"?"EN":"ES";b.title=t("langBtnAria");b.setAttribute("aria-label",t("langBtnAria"))});
+if($("#gerr").textContent)$("#gerr").textContent=t("gateErr");
+renderSOSButtons();if(activeMode)runSOS(activeMode.k);
+renderFeatured();renderCourses();renderList();renderFavs();paintTheme();paintFT();
+if(cur&&$("#detail").classList.contains("on"))renderDetail();
+if(buddySearched)renderBuddy();
+$$("#bres [data-bud]").forEach(b=>b.disabled&&(b.textContent=t("reqDone")))}
+applyLang();
+</script>
+</body></html>
